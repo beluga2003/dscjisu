@@ -2,7 +2,6 @@ import { GetStaticProps } from 'next';
 import EventCard from '../components/cards/event/EventCard';
 import PrimaryLayout from '../components/layouts/PrimaryLayout/Layout';
 import EventData from '../content/events.json';
-import { NextPageWithLayout } from './page';
 
 type event = {
     name: string;
@@ -16,6 +15,10 @@ type event = {
     isActive: boolean;
     type: string;
     locationName: string;
+}
+
+type Props = {
+    events: event[];
 }
 
 
@@ -32,7 +35,7 @@ export const getStaticProps: GetStaticProps = async () => {
 }
 
 
-const About: NextPageWithLayout = ({ events }) => {
+const About = ({ events }: Props) => {
     return (
         <div className='min-h-screen'>
             <div className=' py-20 bg-slate-300 dark:bg-[#0E1525] min-h-screen'>
