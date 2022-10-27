@@ -12,7 +12,7 @@ const PrimaryLayout: React.FC<IPrimaryLayout> = ({
     return (
         <>
             <Head>
-                <title>GDSC MAIN Layout</title>
+                <title>DSC JIS University</title>
             </Head>
             <div {...divProps} >
                 <Navbar />
