@@ -1,6 +1,5 @@
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import Image from 'next/image';
-
 export interface IEventCard {
   name: string;
   description: string;

@@ -1,0 +1,55 @@
+{
+    "data": [{
+            "id": "1",
+            "name": "Getting Started With GDSC",
+            "description": "We'll be introducing our club and the events we've got planned for the next year - we would love for you to join our growing community!",
+            "date": "2022-08-17T18:30:00.000Z",
+            "type": "Info-Session",
+            "eventpic": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_3,f_auto,g_center,h_175,q_auto:good,w_175/v1/gcs/platform-data-dsc/events/Get%20started%20with%20jisu%20%282%29.png",
+            "eventLink": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-getting-started-with-gdsc/",
+            "isActive": false,
+            "isCompleted": true,
+            "locationName": "JIS University",
+            "locationUrl": ""
+        },
+        {
+            "id": "1",
+            "name": "Getting Started With GDSC",
+            "description": "We'll be introducing our club and the events we've got planned for the next year - we would love for you to join our growing community!",
+            "date": "2022-08-17T18:30:00.000Z",
+            "type": "Info-Session",
+            "eventpic": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_3,f_auto,g_center,h_175,q_auto:good,w_175/v1/gcs/platform-data-dsc/events/Get%20started%20with%20jisu%20%282%29.png",
+            "eventLink": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-getting-started-with-gdsc/",
+            "isActive": false,
+            "isCompleted": true,
+            "locationName": "JIS University",
+            "locationUrl": ""
+        },
+        {
+            "id": "1",
+            "name": "Getting Started With GDSC",
+            "description": "We'll be introducing our club and the events we've got planned for the next year - we would love for you to join our growing community!",
+            "date": "2022-08-17T18:30:00.000Z",
+            "type": "Info-Session",
+            "eventpic": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_3,f_auto,g_center,h_175,q_auto:good,w_175/v1/gcs/platform-data-dsc/events/Get%20started%20with%20jisu%20%282%29.png",
+            "eventLink": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-getting-started-with-gdsc/",
+            "isActive": false,
+            "isCompleted": true,
+            "locationName": "JIS University",
+            "locationUrl": ""
+        },
+        {
+            "id": "1",
+            "name": "Getting Started With GDSC",
+            "description": "We'll be introducing our club and the events we've got planned for the next year - we would love for you to join our growing community!",
+            "date": "2022-08-17T18:30:00.000Z",
+            "type": "Info-Session",
+            "eventpic": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_3,f_auto,g_center,h_175,q_auto:good,w_175/v1/gcs/platform-data-dsc/events/Get%20started%20with%20jisu%20%282%29.png",
+            "eventLink": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-getting-started-with-gdsc/",
+            "isActive": false,
+            "isCompleted": true,
+            "locationName": "JIS University",
+            "locationUrl": ""
+        }
+    ]
+}

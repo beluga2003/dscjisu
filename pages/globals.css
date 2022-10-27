@@ -1,9 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @layer components {
-  .btn-primary {
-    @apply border-0 p-2 px-6 bg-slate-100 rounded-md;
-  }
+    .nav-list {
+        @apply text-ellipsis font-sans font-medium m-4;
+    }
+}
+
+
+/* .nav-list {
+    @apply text-ellipsis font-mono font-medium m-4;
+} */
+
+.menu-options {
+    font-size: larger;
+}
+
+.footer {
+    background-image: url("/animation_gdsc.webp");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 90px;
+}
+
+.navig {
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: .2px solid whitesmoke;
+    border-style: double;
+    letter-spacing: 0.5px;
+}
+
+ul .nav-list {
+    /* color: white; */
+    font-size: 17px;
 }
