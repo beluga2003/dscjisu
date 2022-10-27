@@ -1,0 +1,320 @@
+---
+tag: python
+title: How to remove element from list Python
+body: A list is a data structure in Python that is a mutable, or changeable, ordered sequence of elements. There are bunch of option by which one can remove element from list in python. In this article , we would be looking into different list methods in python that remove item from list python. List values or items are placed in between square brackets [ ], separated by commas. Empty lists do not contain any values within the square brackets.
+author: Abhishek Kushwaha
+time: 2 min read
+blogImage: /blogs/why-cybersecurity-Important-!/blogimage.png
+authorImage: /blogs/why-cybersecurity-Important-!/authorimage.png
+blogslug: why-cybersecurity-Important-!
+---
+
+A list is a data structure in Python that is a mutable, or changeable, ordered sequence of elements. There are bunch of option by which one can remove element from list in python. In this article , we would be looking into different list methods in python that remove item from list python. List values or items are placed in between square brackets [ ], separated by commas. Empty lists do not contain any values within the square brackets.
+
+## What are lists in Python?
+
+List is the most versatile python data structure and stores an ordered sequence of elements just like your shopping list or to-do-list. In Python, Lists are mutable,meaning that the elements can be altered unlike tuples or even strings. These elements of a list are called items and can be any data type.
+
+Lists are used to store multiple items in a single variable. These items can be objects , strings , numbers etc.
+
+Lists are one of 4 built-in data types in Python used to store collections of data, the other 3 are Tuple, Set, and Dictionary, all with different qualities and usage.
+
+Lists are created using square brackets as shown below:
+
+```python
+names = [ "abhishek", "aditya", "shivam" ]
+print(names) # printing the names list .
+```
+
+## Various methods to remove elements from a list
+
+In Python, there are various ways to remove an element from a given list. The methods are remove(), pop() and clear() .Beside these, we can also use del keyword to remove an element from a list.
+
+One by one we would be looking at the different methods to remove an element from a list.
+
+- remove()
+- pop()
+- clear()
+- del
+  Let's start with remove method and explore who it actually function.
+
+## Using remove() method+ example
+
+The .**remove()** method in Python is used to remove an element from a list by passing in the value of the element to be removed as an argument. In the case where two or more elements in the list have the same value, the first occurrence of the element is removed. These state that the actual list is modified and thus it doesn't return any particular value. If we print the method call its return None.
+The syntax for the same method is :
+
+```python
+list_name.remove(element_name)
+```
+
+> As we can see **_remove_** takes a single parameter as an argument which we want to remove from the list.
+> If somehow list don't contain , an **exception** is given stating that the **_element not in list_**.
+
+Let's take an example where we have a list containing names of some tech stacks and one of them is stored twice.
+
+```python
+# Create a list
+tech_stack = [ "html", "javascript", "python", "java", "react" , "python" ]
+
+# Removes the first occurance of "Chris"
+tech_stack.remove("python")
+print(tech_stack) # updated tech_stack list after remove method.
+```
+
+The Output :
+
+```python
+[ "html", "javascript", "java", "react" , "python" ]
+```
+
+In the above case we can notice that python was stored twiced in tech_stack. Using the remove method over tech_stack removes the first matching element that was passed as argument. Therefore in this case python was removed from the first place it was stored and not from the last index as remove only removes the element that was found at earliest index.
+
+## Using pop() method+ example
+
+We can remove an element from a list using the.pop() method. It also returns the element that was removed. It takes one optional input, the index of the element to be removed. If no index is provided, the method will remove the last element in the list and return that element. We modify the original list using this method.
+
+The syntax for the same method is :
+
+```python
+list_name.pop(element_index)
+```
+
+> - As we can see **_pop_** takes a single parameter as an argument from which index we want to remove an element.
+> - This element_index is also optional. If not passed, the default value the pop method set is -1. That means the last element from the list is returned.
+> - We have to make sure that the index is present in the list or its't out of range.If somehow index is not found pop() method throws an error saying **_IndexError:pop index_**
+
+```python
+# a list
+courses =  [ "Python", "Data Structures", "Video Editing", "Algorithms", "Smart Contract" ]
+
+# Pop the last element
+removed_course = courses.pop()
+
+print(courses)
+print(removed_coursev)
+
+# Pop the element " Video Editing "
+courses.pop(3)
+print(courses)
+```
+
+The Output :
+
+```python
+[ "Python", "Data Structures", "Video Editing", "Algorithms" ]
+"Smart Contract"
+[ 'Python', 'Data Structures', 'Algorithms' ]
+```
+
+The pop() method returns the element removed based on the index provided. The list is also modified after the removal of list element.
+
+## Using clear() method+ example
+
+The.clear() method removes all elements from the list. It does not accept any parameters and does not return any value. Following method execution, the original list is modified with all elements removed, leaving the list with no items or elements. The Whole class is cleared. As a result, the original list is modified, and the list is left empty.
+
+The syntax for clear() method is:
+
+```python
+list_name.clear()
+```
+
+Let's have an example where clear method would empty the list.
+
+```python
+
+# A list with few elements
+list=[01 , "Abhishek Kushwaha" , "abhishekkushwaha@gmail.com" , "scaler"]
+
+# using clear method over list
+
+new_list= list.clear()
+print(new_list)
+print(list)
+```
+
+The Output:
+
+```python
+None
+[]
+```
+
+## Using del operator+ example
+
+Despite of all the above methods , we also can use del operator followed by a list name in which we have to pass the index of the element to the list which we want to delete from the list. The del keyword also allow us to delete a range of elements from the list. In-order to access a range of elements from a list, you need to slice a list. Slicing a list is used when we have to deal with a smaller part of the list. When we slice , the range starts from the index to the element index we tend to remove or delete.
+
+The syntax for del use case is :
+
+```python
+del list_name[index]
+```
+
+To slice a range of elements from the list using the del keyword. One can specify where to start the slicing, where to end, and specify the step. List slicing returns a new list from the existing list.The start/ stop index from the list can be passed to del keyword as shown below:
+
+```python
+del list_name[start:stop]
+```
+
+All the elements that falls in the range of start and stop is removed or deleted. How ever the stop index element is not removed as the range starts from the start index and ends one before the stop index.
+
+Let's explore few examples that shows to remove the first element, last element, multiple elements from the list using del.
+
+```python
+my_list = list(range(15)) # generate elements from 0 to 14.
+print(" The Original list is ", my_list)
+
+#To remove the firstelement
+del my_list[0] # list start from index 0.
+print("After removing first element", my_list)
+
+#To remove last element
+del my_list[-1]
+print(" After removing last element " , my_list)
+
+# To remove element for given index : for example index:5
+del my_list[5]
+print(" After removing element from index:5 " , my_list)
+
+# To remove last 2 elements from the list
+del my_list[-2]
+print(" After removing last 2 elements " , my_list)
+
+#To remove multiple elements
+delmy_list[1:5]
+print("After removing multiple elements from start:stop index (1:5)", my_list)
+
+#To remove multiple elements
+del my_list[4:]
+print("To remove elements from index 4 till the end (4:)", my_list)
+```
+
+The Ouput:
+
+```python
+The Originallist is  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+After removing first element [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+After removing last element [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+After removing element from index:5 [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13]
+After removing last 2 element [ 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 13 ]
+After removing multiple elements from start:stop index (1:5) [ 1, 7, 8, 9, 10, 11, 13 ]
+To remove elements from index 4 till the end (4:) [1, 7, 8, 9]
+```
+
+## Examples of removing elements from a list
+
+Let's see how we can make use of list methods to remove the elements from the list.
+
+### How to remove the first element from the list using methods like remove() , pop() and del keyword.
+
+To remove the first element from the list using the remove() method, we must pass the first element to be removed and, in the case of pop, the index. And the index would be zero to remove the first element from the list.
+
+In addition, as with the pop method, we can use the del keyword to remove the same first element from the list.
+
+Let's take an example to understand how to remove first element from list using remove(), pop() and del.
+
+```python
+alphabets = [ 'A' , 'B' , 'C' , 'D' , 'E' , 'F' ]
+print(alphabets)
+
+# Using remove() to remove first element
+
+alphabets.remove('A') # As A is the first alphabet in the list
+print("Using remove(), the final list is ", alphabets)
+
+lists = ['abhishek' , 'aditya' , 'scaler']
+print(lists)
+
+# Using pop() to remove the first element
+first_item = lists.pop(0) # As the list index starts from  0.
+
+print("The first element removed from alphabets is ", first_item)  #  abhishek
+print("Using pop(), the final list is ", lists)
+
+# Using del to remove the first element
+names = ['Abhi', 'Bipin', 'Chandan', 'Debojeet', 'Ektra', 'Faran']
+del names[0]
+print(" Using del, the final list is ", names)
+```
+
+The Output:
+
+```python
+['A' , 'B' , 'C' , 'D' , 'E' , 'F']
+Using remove() , the final list is  ['B', 'C', 'D', 'E', 'F']
+['abhishek' , 'aditya' , 'scaler']
+abhishek
+['aditya' , 'scaler']
+[ 'Bipin', 'Chandan', 'Debojeet', 'Ektra', 'Faran' ]
+```
+
+### How do I remove multiple elements from a list in Python?
+
+When we tend to remove multiple elements from a list, the methods like remove() and pop() are not used as they only remove single element at a time.
+
+Let's take an example where we are given an list ['first' , 'second' , 'third' , 'fourth'] and we want to remove multiple element from the list.
+
+```python
+#Using del to remove the multiple elements from list
+
+position_list= ['first' , 'second' , 'third' , 'fourth']
+
+print("List originally is " , position_list)
+
+del position_list[1:3] # we pass an range when we want to remove multiple element from an list.
+
+# The range would start from the 1 index to 3rd index which don't include the 3rd index. Basicallly from 1st index to second Index.
+print("Using del, the final list is ", position_list) #  ['first' , 'fourth']
+
+
+```
+
+As we can see that we have passed a range of elements from the list. That range slice the list and creates a new list which then by the del keyword gets removed from the original list.
+
+### How do I remove an element from a list by using index in Python?
+
+Methods like pop() could be used to remove an element based on index. Apart from methods we can also use del keyword that can also be used to remove the element for a given index.
+
+```python
+#Using pop to remove the multiple elements from list
+lists = ['abhishek' , 'aditya' , 'scaler']
+print(lists)
+element = lists.pop(2)
+print("Element removed for index: 2 is ", element)
+print("Using pop, the final list is ", lists)
+
+
+#Using del to remove the multiple elements from list
+position_list= ['first' , 'second' , 'third' , 'fourth']
+print("Originallist is ", position_list)
+del position_list[2] # third is removed from the list
+print("Using del, the final list is ", position_list)
+
+```
+
+The Output:
+
+```python
+# ['abhishek' , 'aditya' , 'scaler']
+Element removed for index: 2 is scaler
+Using pop, the final list is ['abhishek' , 'aditya' ]
+Originallist is ['first' , 'second' , 'third', 'fourth']
+Using del, the final list is ['first' , 'second', 'fourth']
+```
+
+When we use pop method over the list we need to have a index from which element is needed to be removed. Giving the index as 2 makes the third element from the list to disappear as index starts form zero.
+
+The pop method return that removed element and store into element variable above.
+
+Similarly , when we are del keyword we are passing the index and that element is removed from the original list.
+
+These were some of ways by which we can remove an element or multiple element from the list in python.
+
+## Conclusion
+
+- In Python , we have several ways or method via which we can remove an element from a given list. These methods are remove() , pop() and clear().
+
+- With these option we also have del operator which also removes an element from the list
+
+- remove() - It is used to remove the very first given element matching from the list.
+
+- pop() - The pop() method is used to remove an element from list on the basis of index that is being passes as an argument.
