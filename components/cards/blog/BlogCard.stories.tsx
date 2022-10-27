@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import BlogCard, { IBlogCard } from './BlogCard';
-import { mockCatCardProps } from './BlogCard.mocks';
+import { mockBlogCardProps } from './BlogCard.mocks';
 
 export default {
   title: 'cards/blog/BlogCard',
@@ -18,5 +18,5 @@ export const Base = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 
 Base.args = {
-  ...mockCatCardProps.base,
+  ...mockBlogCardProps.base,
 } as IBlogCard;
