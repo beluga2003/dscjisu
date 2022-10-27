@@ -17,9 +17,9 @@ export interface IBlogCard {
 const BlogCard: React.FC<IBlogCard> = ({ blogslug, tag, title, body, author, time, blogImage, authorImage }) => {
 
   return (
-    <>
-      <Link href={`/blogs/${blogslug}`} passHref >
-        <div className="cursor-pointer">
+    < >
+      <Link href={`/blog/${blogslug}`} passHref >
+        <div className="cursor-pointer text-start">
           <div className={styles.container}>
             <div className={styles.card}>
               <div className={styles.card__header}>
