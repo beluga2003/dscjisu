@@ -15,6 +15,7 @@ module.exports = {
     fontFamily: {
       sans: ['Arial', 'sans-serif'],
       serif: ['Garamond', 'serif'],
+      mono: ['Consolas', 'monospace'],
     },
     extend: {
       colors: {
