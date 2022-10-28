@@ -1,16 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@layer components {
-    .nav-list {
-        @apply text-ellipsis font-sans font-medium m-4;
-    }
-}
-
-
-/* .nav-list {
+.nav-list {
     @apply text-ellipsis font-mono font-medium m-4;
-} */
+}
 
 .menu-options {
     font-size: larger;
@@ -36,4 +29,97 @@
 ul .nav-list {
     /* color: white; */
     font-size: 17px;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 50;
+    }
+    100% {
+        opacity: 100;
+    }
+}
+
+@keyframes linearclr {
+    0% {
+        background-position: 0%;
+    }
+    50% {
+        background-position: 200%;
+    }
+    100% {
+        background-position: 400%;
+    }
+}
+
+.container p {
+    line-height: 33px;
+    padding: 25px;
+}
+
+.ourlogo h3 {
+    font-size: 2.3rem;
+    margin-top: -30px;
+    font-weight: 650;
+}
+
+.ourlogo h4 {
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.header-section .container {
+    padding: 5rem;
+}
+
+.brandingt {
+    background: linear-gradient(90deg, rgb(121, 255, 19), rgba(245, 73, 30, 0.912), rgb(245, 241, 13), rgba(11, 168, 231, 0.912));
+    -webkit-background-clip: text;
+    background-size: 400%;
+    -webkit-text-fill-color: transparent;
+    pointer-events: none;
+    animation: fade 3s ease-in 0s;
+    animation: linearclr 10s linear infinite;
+}
+
+.herop {
+    animation: fade 6s ease-in 0s;
+    animation-fill-mode: forwards;
+}
+
+.header-section h1 {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.header-section p {
+    /* padding : 30px 50px 20px 0px; */
+    line-height: 1.9em;
+    text-align: center;
+    word-spacing: 5px;
+}
+
+.navig {
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: .2px solid whitesmoke;
+    border-style: double;
+    letter-spacing: 0.5px;
+}
+
+.branding-img {
+    background-image: url("/images/gdsc-branding.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    margin: auto;
+    width: 350px;
+    height: 130px;
 }
