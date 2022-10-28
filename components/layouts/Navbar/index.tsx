@@ -30,13 +30,13 @@ function Navbar() {
                     </div>
                     <div className="">
                         <span className=' lg:hidden text-3xl'>
-                            {!open ? <CloseIcon onClick={toogleMenu} className='cursor-pointer menu-options' /> : <SegmentIcon onClick={toogleMenu} className='cursor-pointer menu-options text-6xl' />}
+                            {open ? <CloseIcon onClick={toogleMenu} className='cursor-pointer menu-options' /> : <SegmentIcon onClick={toogleMenu} className='cursor-pointer menu-options text-6xl' />}
                         </span>
                     </div>
                 </div>
 
                 <div className="links bg-dark  lg:flex flex-row hidden" id="menu-list">
-                    <ul className='lg:flex lg:flex-row lg:justify-end lg:opacity-100 opacity-100 text-center flex-col   p-10 gap-2 sm:flex   lg:py-0  lg:pl-0 '>
+                    <ul className='lg:flex lg:flex-row lg:justify-end lg:opacity-100 opacity-100 text-center flex-col   p-10 gap-5 sm:flex   lg:py-0  lg:pl-0 '>
                         <li onClick={toogleMenu}><Link href={'/'}  ><a href="#" className="nav-list   hover:font-semibold " >Home</a></Link></li>
                         <li onClick={toogleMenu}><Link href={'/event'} ><a href="#" className="nav-list   hover:font-semibold ">Events</a></Link></li>
                         <li onClick={toogleMenu}><Link href={'/blog'} ><a href="#" className="nav-list   hover:font-semibold ">Blogs</a></Link></li>
