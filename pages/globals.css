@@ -123,3 +123,44 @@ ul .nav-list {
     width: 350px;
     height: 130px;
 }
+
+article {
+    color: white;
+    background-color: black;
+}
+
+article h1 {
+    font-size: 2.0rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+article h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+article h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+article pre {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+article ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+}
+
+article blockquote {
+    padding: 20px;
+    font-style: italic;
+}
