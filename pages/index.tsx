@@ -1,7 +1,6 @@
 // import SpeedDail from '../components/speedDail';
 import Chapter from '../layout/Chapter';
 import Community from '../layout/Community';
-import Events from '../layout/Events';
 import Header from '../layout/Header';
 import Team from '../layout/Team';
 
@@ -14,24 +13,24 @@ export async function getStaticProps() {
   const Event = await event_data.json()
   const Community = await community_data.json()
   // sort the event by date
-  const sortedEvent = Event.sort((a, b) => {
-    return (b.id) - (a.id);
-  });
+  // const sortedEvent = Event.sort((a, b) => {
+  //   return (b.id) - (a.id);
+  // });
 
   return {
     props: {
       team: Team,
-      event: sortedEvent,
+      event: Event,
       community: Community
     }, // will be passed to the page component as props
   }
 }
 
-const Home = ({ team, event, community }) => {
+const Home = ({ team, _event, community }) => {
   return (
     <>
       <Header />
-      <Events event={event} />
+      {/* <Events event={event} /> */}
       <Team team={team} />
       <Chapter />
       <Community community={community} />

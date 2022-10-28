@@ -11,6 +11,7 @@ export const getSlugs = (): string[] => {
     return paths.map((path) => {
         const parts = path.split("/");
         const fileName = parts[parts.length - 1];
+        // eslint-disable-next-line no-unused-vars
         const [slug, _ext] = fileName.split(".");
         return slug;
     });

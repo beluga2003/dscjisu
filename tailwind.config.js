@@ -4,7 +4,7 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    // Ensure these match with .storybook/preview.js
+    // Ensure these match with .storybook / preview.js
     screens: {
       xs: '375px',
       sm: '600px',
@@ -17,16 +17,7 @@ module.exports = {
       serif: ['Garamond', 'serif'],
       mono: ['Consolas', 'monospace'],
     },
-    extend: {
-      colors: {
-        blue: {
-          500: '#1a73e8',
-        },
-      },
-      spacing: {
-        128: '32rem',
-      },
-    },
+    extend: {},
   },
   plugins: [],
 };
