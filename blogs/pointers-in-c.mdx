@@ -1,0 +1,308 @@
+---
+tags: c
+title: Pointers in C
+body: Decorators are one of the most helpful and powerful tools of Python. These are used to modify the behaviour of the particular function. Decorators provide the flexibility to wrap another function to expand the features and working of wrapped function, without modifying the original called function.
+author: Abhishek Kushwaha
+date: 27/10/2022
+blogImage: /blogs/pointers-in-c/blogimage.jpg
+authorImage: https://github.com/Abbhiishek.png
+blogslug: pointers-in-c
+---
+
+# Overview
+
+A pointer is a variable whose value is the address of another variable of the same type. The variable's value that the pointer points to is accessed by dereferencing using the \* operator. There are different types of pointers such as null, void, wild, etc.
+
+# Scope
+
+The article explains Pointer in C's syntax and how to use pointers with examples.
+The article also explains different types of pointers in C with explanations and the benefits of using pointers in C.
+
+# What are Pointers in C?
+
+Every variable we define in our program is stored at a specific in memory.
+
+Let's say we define the following integer:
+
+```c
+int n = 50;
+```
+
+In our computer’s memory, there are now 4 bytes somewhere that have the binary value of 50, with some value for its address, like 0x123:
+
+**What is 0x123?**
+
+0x123 is a hexadecimal number. As memory address tends to be large numbers we often use a hexadecimal number system to represent them.
+
+We can access this address in our C program using the & operator.
+
+Let's look at an example:
+
+```c
+#include<stdio.h>
+
+void main()
+{
+    int n = 50;
+    printf("Value of the variable n is: %d\n", n);
+    printf("Memory address of the variable n is: %x\n", &n);
+}
+```
+
+Output:
+
+```
+Value of the variable n is: 50
+Memory address of the variable n is: dcbc14ac
+```
+
+We got dcbc14ac as the address of variable n.
+
+**What's the role of a pointer in all this?**
+
+A pointer is a variable that stores an address in memory, where some other variable might be stored.
+
+In the subsequent sections, we will learn how to define and use pointers.
+
+# Syntax of Pointers in C
+
+The syntax of Pointers in C is:
+
+```c
+data_type * pointer_variable_name;
+```
+
+Some of the valid pointers declarations in C are as follows:
+
+```c
+int    *ptr_in;     // pointer to an integer
+char   *ptr_ch ;    // pointer to a character
+double *ptr_dbl;    // pointer to a double
+float  *ptr_fl;     // pointer to a float
+```
+
+# How to Use Pointers in C?
+
+## Declare a pointer variable.
+
+A variable's address is assigned to a pointer using the & operator.
+Use the address in the pointer variable to get the value by using the \*(asterisk) operator, which returns the variable's value at the address indicated by its argument.
+How to use pointers in c
+
+In the above example, a variable int i = 4 is declared, the address of variable i is 0x77ff. A pointer variable int *ptr=&i is declared. It contains the address of variable int i. The value of *ptr will be value at address 0x77ff; that value would be 4.
+
+Example of Pointers in C
+Illustration of pointers in C using following code:
+
+```c
+#include <stdio.h>
+
+int main()
+{
+   int x = 42;     //variable declaration
+   int *ptr;      //pointer variable declaration
+   ptr = &x;       //store address of variable x in pointer ptr
+   //printing the address
+   printf("Address stored in a variable ptr is: %x \n", ptr);
+   //printing the value
+   printf("Value stored in a variable ptr is: %d \n", *ptr);
+   return 0;
+}
+```
+
+Output:
+
+Address stored in a variable ptr is: a7a9b45c
+Value stored in a variable ptr is: 42
+
+Explanation
+
+**Working of pointers in c**
+
+In the above example, an int variable x is declared first.
+The memory location where variable x is declared is a7a9b45c. The value stored in x is 42.
+The pointer variable ptr is declared using _(asterisk) symbol, as mentioned that the data type of the pointer will also be the same as the variable it will point to.
+In this, ptr = &x, by using & operator, the address of x variable is stored in ptr.
+The value stored in x is accessed using _ operator, \*ptr will give the value at location a7a9b45c, ie., 42.
+Types of Pointers in C
+There are the following types of pointers:
+
+**Null Pointer**
+
+A null pointer is a type of pointer created by assigning a null value to the pointer. A null pointer can be of any data type. It has a value of 0 in it. The operating system reserves memory at address 0; most operating systems do not allow programs to access memory at that address. The memory address 0 has unique importance.
+
+It indicates that the pointer is not intended to point to an accessible memory location. Dereferencing null pointer results in undefined behavior, i.e., if you try to access as \*ptr (where ptr is a NULL pointer), it will result in a null pointer exception.
+
+Illustration of Null pointer using following code:
+
+```c
+
+#include <stdio.h>
+int main()
+{
+int \*ptr = NULL; //null pointer
+printf(“The value inside variable ptr is: %x”,ptr);
+return 0;
+}
+
+```
+
+Output
+
+```
+
+The value inside variable ptr is: 0
+
+```
+
+**Void Pointer**
+
+The void pointer is a generic pointer that isn't associated with any data type. A void pointer can be typecasted to any type, so it is instrumental in assigning the different types of variables to the void pointer.
+
+Illustration of void pointer using following code:
+
+```c
+#include<stdio.h>
+    int main()
+    {
+        void *ptr=NULL; //void pointer
+        int x = 5;
+        ptr = &x;
+        //typecasted to int using (int *)
+        printf("value of *ptr is %d ", *(int *)ptr);
+        return 0;
+    }
+```
+
+Output
+
+```
+value of *ptr is 5
+```
+
+**Wild pointer**
+
+If a pointer isn't initialized to anything, it's called a wild pointer. Dereferencing a wild pointer has undefined behavior that may crash the program or give a garbage value.
+
+Illustration of wild pointer using following code:
+
+```c
+    #include <stdio.h>
+    int main()
+    {
+        int *ptr;	//wild pointer
+        printf("value of *ptr is %d ",*ptr);
+        return 0;
+    }
+```
+
+Output
+
+Runtime Error
+The program will result in a segmentation fault(SIGSEGV) if the garbage pointer is not a valid address.
+
+**Dangling Pointer**
+
+A dangling pointer is a pointer that refers to a memory location that has been released or deleted.
+
+Illustration of dangling pointer using following code:
+
+```c
+    #include <stdlib.h>
+    #include <stdio.h>
+    int main()
+    {
+        //memory allocated to ptr
+        int *ptr = (int *) malloc(sizeof(int));
+        // memory released
+        free(ptr);
+        // ptr is pointing to a deleted memory location now.
+        // now ptr became dangling pointer
+        printf("value of *ptr is %d ",*ptr);
+        // Removing dangling pointer
+        ptr = NULL;
+    }
+```
+
+Output
+
+```
+    value of *ptr is 0
+```
+
+**Complex Pointer**
+
+A Complex pointers contains of [] , _ ,(), data type, identifier. These operators have different associativity and precedence. () & [] have the highest precedence & associativity from left to right followed by _ & Identifier having precedence 2 & associativity from right to left and Data Type having the least priority.
+
+    char (* ptr)[4]
+
+Here, ptr is a pointer to a one-dimensional character array of size four.
+
+## Other Pointers
+
+The following are some other pointers used in old 16-bit Intel architecture:
+
+**Near pointer**
+
+A near pointer works with data segments of memory that are in 64Kb of range. It can't access addresses outside of that data segment. We can make any pointer a near pointer by using the keyword 'near'. Illustration of Near pointer using following code:
+
+```c
+#include<stdio.h>
+    int main()
+    {
+       int x=42;
+       int near* ptr = &x;
+       int sz = sizeof(ptr);
+       printf("size of ptr is %d byte",sz);
+       return 0;
+    }
+```
+
+Output
+
+```
+size of ptr is 2 byte
+```
+
+**Far pointer**
+
+A far pointer has the size of 4 bytes (32 bit), and it can visit memory beyond the current segment. The compiler allocates a segment register for segment address and another register for offset within the current segment.
+
+Illustration of far pointer using following code:
+
+```c
+#include<stdio.h>
+  int main()
+   {
+      int x=42;
+      int far* ptr = &x;
+      int sz = sizeof(ptr);
+      printf("size of ptr is %d byte",sz);
+      return 0;
+   }
+```
+
+Output
+
+```
+size of ptr is 4 byte
+```
+
+**Huge Pointer**
+
+A huge pointer is similar to a far pointer, the size of a huge pointer is also 4 bytes (32 bit), and it can also visit memory beyond the current segment.
+
+The main difference between huge and far pointer is of modification of segment. In the far pointer, the segment part cannot be modified. But in the Huge pointer, the segment part can be changed.
+
+**Benefits of Using Pointers in C**
+
+- Pointers are helpful for memory location access.
+- Pointers can be used for dynamic space allocation(malloc, etc.), and space can be deallocated also.
+- The data structures such as graphs, linked lists, trees, etc., can be created using pointers.
+- Pointers allow references to function and thereby help in the passing of function as arguments to other functions.
+- Conclusion
+- A pointer is a variable whose value is the address of another variable of the same type.
+- The value of the variable that the pointer points to by dereferencing using the \* operator.
+- The different types of pointers are void, null, dangling, wild, near, far, and huge.
+- A pointer can be typecasted to different data types.
+- Pointers are slower in accessing than direct access to the variables.
