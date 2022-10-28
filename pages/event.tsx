@@ -29,7 +29,7 @@ export const getStaticProps: GetStaticProps = async () => {
     // console.log(res)
     return {
         props: {
-            events: res.data
+            events: res
         }
     }
 }
