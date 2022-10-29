@@ -23,7 +23,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
                 <meta name="description" content={post.meta.body} />
                 <meta name="og:title" content={post.meta.title} />
                 <meta name="og:description" content={post.meta.body} />
-                <meta name="og:image" content={post.meta.blogImage} />
+                <meta name="og:image" content={`https://dscjisu.vercel.app` + post.meta.blogImage} />
             </Head>
             <main className="bg-black">
                 <div className="py-20 mx-auto lg:max-w-[65%] xs:max-w-[75%]">
