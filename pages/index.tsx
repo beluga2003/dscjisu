@@ -4,6 +4,7 @@ import Community from '../layout/Community';
 import Header from '../layout/Header';
 import Team from '../layout/Team';
 
+import Head from 'next/head';
 import CommunityData from '../content/community.json';
 import EventData from '../content/events.json';
 import TeamData from '../content/team.json';
@@ -38,6 +39,9 @@ export async function getStaticProps() {
 const Home = ({ team, _event, community }) => {
   return (
     <>
+      <Head>
+        <title>DSC JIS University</title>
+      </Head>
       <Header />
       {/* <Events event={event} /> */}
       <Team team={team} />

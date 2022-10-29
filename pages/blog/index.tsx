@@ -1,9 +1,14 @@
+import Head from "next/head";
 import BlogCard from "../../components/cards/blog/BlogCard";
 import { getAllPosts, PostMeta } from "../../lib/blog";
+
 
 export default function Blog({ blogs }: { blogs: PostMeta[] }) {
     return (
         <>
+            <Head>
+                <title>Blog | DSC JISU</title>
+            </Head>
             <div className='lg:p-20 sm:p-2 bg-white flex  flex-col  dark:bg-[#182232] py-10'>
                 <div className="text-center">
                     <h1 className='lg:text-6xl text-3xl dark:text-white font-mono'><span className='underline decoration-solid underline-offset-2 decoration-cyan-300 font-mono community'>Blogs</span></h1>
@@ -17,12 +22,13 @@ export default function Blog({ blogs }: { blogs: PostMeta[] }) {
                             <BlogCard key={blog.slug}
                                 tag={blog.tags}
                                 title={blog.title}
-                                body={blog.description}
+                                body={blog.body}
                                 author={blog.author}
-                                time={blog.date}
+                                date={blog.date}
                                 blogImage={blog.blogImage}
                                 authorImage={blog.authorImage}
                                 blogslug={blog.slug}
+                                readingTime={blog.readingTime}
 
                             />
                         ))

@@ -20,6 +20,10 @@ export default function PostPage({ post }: { post: MDXPost }) {
         <>
             <Head>
                 <title>{post.meta.title}</title>
+                <meta name="description" content={post.meta.body} />
+                <meta name="og:title" content={post.meta.title} />
+                <meta name="og:description" content={post.meta.body} />
+                <meta name="og:image" content={post.meta.blogImage} />
             </Head>
             <main className="bg-black">
                 <div className="py-20 mx-auto lg:max-w-[65%] xs:max-w-[75%]">
@@ -27,8 +31,10 @@ export default function PostPage({ post }: { post: MDXPost }) {
                         <div>
                             <Image src={post.meta.blogImage} alt="blog image" width="1920" height="1080" className="bg-black rounded-lg" />
                         </div>
-                        <h1 className="text-7xl font-bold text-white">{post.meta.title}</h1>
-                        <div className="py-10">
+                        <h1 className="lg:text-7xl text-4xl py-4 font-bold text-white">{post.meta.title}</h1>
+                        <p className="text-gray-400 text-lg  mb-5">{post.meta.body}</p>
+                        <p className="bg-teal-300 p-2 mt-6 rounded-lg text-black inline ">{post.meta.tags}</p>
+                        <div className="py-10 bg-slate-900 my-10 rounded-lg">
                             <div className="flex flex-row gap-2 justify-center text-start items-center ">
                                 <div>
                                     <Image
@@ -41,7 +47,10 @@ export default function PostPage({ post }: { post: MDXPost }) {
                                 </div>
                                 <div>
                                     <p className="text-white">{post.meta.author}</p>
-                                    <p className="text-white">{post.meta.date}</p>
+                                    <div className="flex gap-2 flex-col">
+                                        <p className="text-white">Published On: {post.meta.date}</p>
+                                    </div>
+                                    <p className="text-white">{post.meta.readingTime}</p>
                                 </div>
                             </div>
                         </div>

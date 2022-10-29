@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Footer from '../components/layouts/Footer';
 import Navbar from '../components/layouts/Navbar';
 import './globals.css';
@@ -7,6 +8,9 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
+      <Head>
+        <title>GDSC JIS University</title>
+      </Head>
       <Navbar />
       <Component {...pageProps} />
       <Footer />
