@@ -35,7 +35,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
                         <p className="text-gray-400 text-lg  mb-5">{post.meta.body}</p>
                         <p className="bg-teal-300 p-2 mt-6 rounded-lg text-black inline ">{post.meta.tags}</p>
                         <div className="py-10 bg-slate-900 my-10 rounded-lg">
-                            <div className="flex lg:flex-row  flex-col gap-2 justify-center lg:text-start text-center items-center ">
+                            <div className="flex lg:flex-row  flex-col gap-4 justify-center lg:text-start text-center items-center ">
                                 <div>
                                     <Image
                                         src={post.meta.authorImage}
@@ -45,10 +45,10 @@ export default function PostPage({ post }: { post: MDXPost }) {
                                         className=" rounded-full"
                                     />
                                 </div>
-                                <div>
+                                <div className="lg:flex flex-col justify-start lg:text-left">
                                     <p className="text-white">{post.meta.author}</p>
                                     <div className="flex gap-2 flex-col">
-                                        <p className="text-white">Published On: {post.meta.date}</p>
+                                        <p className="text-white">Published On: {post.meta.date.slice(0, 15)}</p>
                                     </div>
                                     <p className="text-white">{post.meta.readingTime}</p>
                                 </div>
