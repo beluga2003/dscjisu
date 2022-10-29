@@ -3,9 +3,9 @@
     "author": "Abhishek Kushwaha",
     "description": "Official Site for DSC JIS University",
     "version": "0.1.0",
-    "private": true,
+    "private": false,
     "license": "MIT",
-    "homepage": "YOUR_REPOSITORY_HERE",
+    "homepage": "https://github.com/dscjisu/dscjisu",
     "engines": {
         "node": ">=14.0.0",
         "yarn": ">=1.22.0",
