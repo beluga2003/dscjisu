@@ -16,7 +16,7 @@ export default function Blog({ blogs }: { blogs: PostMeta[] }) {
                         Thanks to our community for writing these blogs.
                     </p>
                 </div>
-                <div className='grid grid-flow-row lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1  lg:mx-5 justify-center'>
+                <div className='grid grid-flow-row lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1  lg:mx-5 justify-items-center'>
                     {
                         blogs.map((blog) => (
                             <BlogCard key={blog.slug}
