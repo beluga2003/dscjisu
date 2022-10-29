@@ -35,7 +35,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
                         <p className="text-gray-400 text-lg  mb-5">{post.meta.body}</p>
                         <p className="bg-teal-300 p-2 mt-6 rounded-lg text-black inline ">{post.meta.tags}</p>
                         <div className="py-10 bg-slate-900 my-10 rounded-lg">
-                            <div className="flex flex-row gap-2 justify-center text-start items-center ">
+                            <div className="flex lg:flex-row  flex-col gap-2 justify-center lg:text-start text-center items-center ">
                                 <div>
                                     <Image
                                         src={post.meta.authorImage}
