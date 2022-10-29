@@ -3,6 +3,9 @@ import CloseIcon from '@mui/icons-material/Close';
 import SegmentIcon from '@mui/icons-material/Segment';
 import Link from 'next/link';
 import { useState } from 'react';
+
+import Image from 'next/image';
+
 function Navbar() {
     const [open, setOpen] = useState(false)
 
@@ -19,13 +22,10 @@ function Navbar() {
                 <div className="flex flex-row justify-between">
                     <div className='inline '>
                         <Link href='/' passHref>
-                            <span >
-                                <span className='text-green-600 font-mono font-semibold text-4xl'>G</span>
-                                <span className='text-red-600 font-mono font-semibold text-4xl'>D</span>
-                                <span className='text-yellow-600 font-mono font-semibold text-4xl'>S</span>
-                                <span className='text-blue-600 font-mono font-semibold text-4xl dark:text-blue-400'>C </span>
-                                <span id="jis--university" className='text-black  font-mono font-semibold text-3xl hover:underline underline-offset-4 decoration-green-500 dark:text-white'>JIS University</span>
-                            </span>
+                            <div className=' flex gap-2 justify-center items-center'>
+                                <Image src="/images/gdsclogo.jpg" alt='gdsc logo' width={50} height={50} />
+                                <span id="jis--university" className='text-black  font-mono font-semibold text-3xl  dark:text-white'>JIS University</span>
+                            </div>
                         </Link>
                     </div>
                     <div className="">
