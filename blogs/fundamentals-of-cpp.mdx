@@ -1,0 +1,206 @@
+---
+tags: Cpp
+title: Fundamentals of C++
+body: A complete guide to mastering C++ from basics to advance!
+author: Sayantan Dey
+date: 2022-06-13
+blogImage: /blogs/fundamentals-of-cpp/blogimage.jpg
+authorImage: /authors/sayantan-dey.jpg
+blogslug: fundamentals-of-cpp
+---
+
+Before going into the syntax of a C++ program, let us first understand some basic terms.
+
+## Tokens :
+
+To understand Tokens, let us first take the example of an atom. We all know that an atom is the smallest unit of matter. Similarly, a token is the **smallest unit** of a program. They can be described as the **fundamental building blocks** that constitute a program.
+
+## Types of Tokens :
+
+- Keywords
+- Identifiers
+- Constants
+- Literals
+- Special Symbols
+- Variables
+- Operators
+
+## Keywords :
+
+Keywords are the **reserved words** in C++ which have a **predefined meaning** to the **compiler**.
+
+As C++ is an extension of the C language, It supports the **32 keywords** that are also available in C.
+![keywords(1).jpg](https://cdn.hashnode.com/res/hashnode/image/upload/v1654767497495/pan9li79T.jpg align="left")
+In addition, C++ supports **31 more keywords** that are not available in C.
+![keywords(2).jpg](https://cdn.hashnode.com/res/hashnode/image/upload/v1654767513914/9qego4jAG.jpg align="left")
+
+## Identifiers :
+
+The **unique names** assigned to **identify** the different parts( **functions, variables, structures, class** etc) of a program are called **Identifiers**.
+
+### The naming convention for Identifiers is as follows :
+
+- An Identifier consists of only **alphabets, characters, digits, and underscores(\_)**.
+- It should not contain **whitespace** or any other **special character**.
+- The first letter of an Identifier must be an alphabet or an underscore(\_).
+- Identifiers in C++ are **case sensitive**( which means that **'var'** and **'VAR'** are different).
+- **Reserved words** cannot be used as Identifiers.
+
+```cpp
+int enum; ❌ // an Identifier cannot be a keyword
+int var; ✅ // valid Identifier
+int 1sum; ❌ // an Identifier cannot start with a digit
+int _sum1; ✅ // valid Identifier
+int var@1; ❌ // an Identifier cannot have a special character
+```
+
+## Constants :
+
+Constants refer to the components whose value **cannot** be **changed ** throughout the program. Constants must have to be **initialized** at the time of creating it and a new value **cannot be assigned** to it later on.
+
+### There are two ways of defining Constants in C++ :
+
+- By using the **const** keyword: Using the **const keyword ** before a variable makes it a Constant.
+
+### Syntax :
+
+```
+const  data_type  constant_name = value;
+```
+
+### Example :
+
+```cpp
+const int val=5; // a constant 'val' is declared with value 5
+
+const int val;
+val=5; ❌ // it should be initialized in the first line
+```
+
+- By using **#define** preprocessor: The preprocessors are the **directives** which give instructions to the compiler to **preprocess** information or **perform a task** before the **actual compilation** of the program starts. All the preprocessor directives are therefore declared before the **main( )**.
+
+![preprocessor.jpg](https://cdn.hashnode.com/res/hashnode/image/upload/v1654959274503/8UyApjSPq.jpg align="left")
+
+**#define** preprocessor directive is used to define a **constant value** with a **name**. The compiler will **replace references** to these constants with the **defined value** at the time of compilation.
+
+### Syntax :
+
+```
+#define   constant_name   value
+```
+
+### Example :
+
+```cpp
+#define   val   5  // a constant 'val' is defined with value 5
+```
+
+### Types of Constants :
+
+![constants.jpg](https://cdn.hashnode.com/res/hashnode/image/upload/v1654959243702/YEUZBAkTZ.jpg align="left")
+
+- **Integer Constants** - constants that have numeric values with no fractional or exponential part. **Example: **0, 1, 999, -567, etc.
+- **Real or Floating-point Constants** - constants that have numeric values with fractional or exponential part. **Example:** 0.45, 0.6669, 1.25, etc.
+- **Character Constants** - Constants that have a character enclosed within single quotations. **Example:** 'A', 'b', 'Z', etc.
+- **String Constants** - Constants that have a group of characters enclosed within double quotations. **Example:** "Code for Community".
+
+## Literals :
+
+Literals are used for representing **fixed** values( or **Constant** values). In other words, a **Constant value** is called a **Literal**.
+
+### Example :
+
+```cpp
+const   int   a = 9; // 'a' is a constant and '9' is a literal
+```
+
+### Types of Literals :
+
+- **Integer Literals** - numeric values with no fractional or exponential part. **Example: **0, -1, 022, 0x521, etc.
+- **Floating-point Literals** - numeric values with fractional or exponential part. **Example:** 0.99E-2, 0.000024, -1.25, etc.
+- **Character Literals** - consists of a single character enclosed within single quotations. **Example:** 'C', 'd', 'X', etc.
+- **String Literals** - consists of a group of characters enclosed within double quotations. **Example:** "Hashnode".
+- **Escape sequence** - Sometimes, it is necessary to use characters that cannot be typed directly through the keyboard. These characters can be represented through an **escape sequence**.
+
+An escape sequence is a **special character** that can be used to **manipulate** the **printing behavior** of the **output**. They are used with a **backslash(\)** followed by a **coded** **character**.
+
+For example, if we were to print "Hello World" in the **same line**, we would simply write
+
+```cpp
+cout << "Hello World" ;
+```
+
+Now, if we were to print "Hello" and "World" in **two different lines**, we can use **\n** to send the cursor to the next line
+
+```cpp
+cout << "Hello \n";
+cout << "World"; // 'World' will be printed in the next line
+```
+
+**Here are a few examples of escape sequence :
+**
+
+<table>
+  <tr>
+    <th> Escape Sequence </th>
+    <th> Character </th>
+  </tr>
+  <tr>
+    <td> \n </td>
+    <td> nextline </td>
+  </tr>
+  <tr>
+    <td> \b </td>
+    <td> backspace </td>
+  </tr>
+  <tr>
+    <td> \r </td>
+    <td> return </td>
+  </tr>
+  <tr>
+    <td> \t </td>
+    <td> horizontal tab </td>
+  </tr>
+  <tr>
+    <td> \v </td>
+    <td> vertical tab </td>
+  </tr>
+  <tr>
+    <td> \\ </td>
+    <td> backslash </td>
+  </tr>
+  <tr>
+    <td> \' </td>
+    <td> single quotation mark </td>
+  </tr>
+  <tr>
+    <td> \" </td>
+    <td> double quotation mark </td>
+  </tr>
+  <tr>
+    <td> \? </td>
+    <td> question mark </td>
+  </tr>
+  <tr>
+    <td> \0 </td>
+    <td> null character </td>
+  </tr>
+</table>
+
+## Special Symbols :
+
+C++ supports a variety of symbols that conveys a special meaning. These special symbols, therefore, cannot be used for any other purpose other than their specified function in the program.
+
+### The following are some of the **Special Symbols** supported by C++ :
+
+- **Brackets [ ]:** Opening and closing brackets are used to declare array size and access array elements.
+- **Parentheses ( ):** These special symbols are used to indicate function calls and function parameters.
+- **Braces { }:** These opening and ending curly braces mark the start and end of a block of code containing more than one executable statement.
+- **Comma (, ):** It is used to separate more than one expression in an executable statement like parameters in function calls.
+- **Colon (:):** It is an operator that essentially invokes something called an initialization list.
+- **Semicolon (;):** It is known as a statement terminator. It indicates the end of one logical entity. That’s why each statement must be ended with a semicolon.
+- **Asterisk (\*):** It is used to create a pointer variable and for the multiplication of variables.
+- **Assignment operator (=):** It is used to assign values to a variable.
+- **Pre-processor (#):** The preprocessor is a directive that is used automatically by the compiler to modify our program before the actual compilation.
+
+This is it for this blog post, we would be discussing Variables and Operators in the next one. Till then Keep Learning...
