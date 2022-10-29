@@ -2,6 +2,7 @@ import fs from "fs";
 import { sync } from "glob";
 import matter from "gray-matter";
 import path from "path";
+import readingTime from "reading-time";
 
 const POSTS_PATH = path.join(process.cwd(), "blogs");
 
@@ -38,13 +39,13 @@ export interface PostMeta {
     title: string;
     body: string;
     author: string;
-    time: string;
     blogImage: string;
     authorImage: string;
     slug: string;
     tags: string;
     date: string;
     description: string;
+    readingTime: string;
 }
 
 export const getPostFromSlug = (slug: string): Post => {
@@ -63,9 +64,9 @@ export const getPostFromSlug = (slug: string): Post => {
             date: (data.date ?? new Date()).toString(),
             body: data.body ?? "",
             author: data.author ?? "",
-            time: data.time ?? "",
             blogImage: data.blogImage ?? "",
             authorImage: data.authorImage ?? "",
+            readingTime: readingTime(content).text,
         },
     };
 };
