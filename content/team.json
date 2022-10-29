@@ -9,6 +9,16 @@
         "image": "https://avatars.githubusercontent.com/u/86338762?v=4"
     },
     {
+        "id": "svdh",
+        "name": "Sudipta Dutta",
+        "role": "Faculty Advisor",
+        "linkedin": "null",
+        "github": "null",
+        "twitter": "",
+        "tagline": "",
+        "image": ""
+    },
+    {
         "id": "2",
         "name": "Saptarshi Bandopadhyay",
         "role": "Community Head",
@@ -16,8 +26,7 @@
         "github": "https://github.com/Saptarshi-Bandopadhyay",
         "twitter": "https://twitter.com/Saptarshi_21023?t=QOubU8IrD9rOk5k-TtvlFg&s=09",
         "tagline": "ML karta hu main bhai ",
-        "image": "https://pbs.twimg.com/profile_images/1563921069945536512/vvcefO8W.jpg",
-        "border_color": "green"
+        "image": "https://pbs.twimg.com/profile_images/1563921069945536512/vvcefO8W.jpg"
     },
     {
         "id": "3",
