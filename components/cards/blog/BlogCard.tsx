@@ -7,14 +7,15 @@ export interface IBlogCard {
   title: string;
   body: string;
   author: string;
-  time: string;
+  date: string;
   blogImage: string;
   authorImage: string;
   blogslug: string;
+  readingTime: string;
 
 }
 
-const BlogCard: React.FC<IBlogCard> = ({ blogslug, tag, title, body, author, time, blogImage, authorImage }) => {
+const BlogCard: React.FC<IBlogCard> = ({ blogslug, tag, title, body, author, date, blogImage, authorImage, readingTime }) => {
 
   return (
     < >
@@ -34,7 +35,7 @@ const BlogCard: React.FC<IBlogCard> = ({ blogslug, tag, title, body, author, tim
               <div className={styles.card__body}>
                 <span className={`${styles.tag} ${styles['tag-blue']}`}>{tag}</span>
                 <h4>{title}</h4>
-                <p>{body}</p>
+                <p>{body.slice(0, 100)}...</p>
               </div>
               <div className={styles.card__footer}>
                 <div className={styles.user}>
@@ -47,7 +48,10 @@ const BlogCard: React.FC<IBlogCard> = ({ blogslug, tag, title, body, author, tim
                   />
                   <div className={styles.user__info}>
                     <h5>{author}</h5>
-                    <small>{time}</small>
+                    <div className='flex gap-3'>
+                      <small>{date.slice(0, 15)}</small>
+                      <small>{readingTime}</small>
+                    </div>
                   </div>
                 </div>
               </div>
