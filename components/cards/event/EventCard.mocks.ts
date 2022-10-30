@@ -12,6 +12,7 @@ const base: IEventCard = {
   isActive: true,
   type: "hands-on",
   locationName: "Online",
+  slug: "host-your-code-with-github",
 };
 
 export const mockEventCardProps = {
