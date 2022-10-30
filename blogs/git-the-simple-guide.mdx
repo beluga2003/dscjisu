@@ -32,31 +32,54 @@ To get started with git and explore version control system we firstly have to in
 
 The process is straight forward and with couple of next click and you are ready to head over to Git BASH.
 
-![The above picture shows the git bash screen which is the terminal which uses bash language for scripting.](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/vcaadjsojnynz39i2jql.png)
+<div align="center">
+  <Image
+    src="/blogs/git-the-simple-guide/git bash.png"
+    height={420}
+    width={840}
+  />
+</div>
 
 The above picture shows the git bash screen which is the terminal which uses bash language for scripting. Before using some git commands and exploring the git features, let's first walk through some command cli commands which would help one getting use to terminal.
 
 1. `pwd command` : The shell command `pwd `displays the file path from the root directory to the current working directory.
 
-![pwd](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/7jh8dft9aovnyyzhetyr.png)
+<div align="center">
+  <Image src="/blogs/git-the-simple-guide/pwd.png" height={420} width={840} />
+</div>
 
-2. `mkdir Make Directory`: The shell command mkdir is used to make a new directory in the filesystem according to its argument. If a file path is given, the new directory will be placed at the end. Otherwise, it creates a new directory in the current working directory.
+2. `mkdir Make Directory`: The shell command mkdir is used to make a new directory
+   in the filesystem according to its argument. If a file path is given, the new directory
+   will be placed at the end. Otherwise, it creates a new directory in the current working
+   directory.
 
-![mkdir](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/vndj17ojuk5guohv5ihv.png)
+<div align="center">
+  <Image src="/blogs/git-the-simple-guide/mkdir.png" height={420} width={840} />
+</div>
 
 The Directory is added to home path to view the folder one can use GUI Application , but we are developers so 😎
 
 3. `ls List`: The shell command ls is used to list the contents of a directory. If no arguments are given, it will list the contents of the current working directory.
 
-![ls](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/9c6teu9qlf0kdfg8gyyx.png)
+<div align="center">
+  <Image src="/blogs/git-the-simple-guide/ls.png" height={420} width={840} />
+</div>
 
 The above folder that We created is present in the folder can be found in the picture shown below :
 
-![folder can be seen](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/nuo5flnzx2jiwuhwxw9r.png)
+<div align="center">
+  <Image
+    src="/blogs/git-the-simple-guide/folder can be seen.png"
+    height={420}
+    width={840}
+  />
+</div>
 
 4. `cd Change Directory` : The shell command cd is used to move throughout the filesystem of a computer.
 
-![cd](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/wfl2anvb6sybcvfe93hp.png)
+<div align="center">
+  <Image src="/blogs/git-the-simple-guide/cd.png" height={420} width={840} />
+</div>
 
 cd accepts a variety of arguments:
 
@@ -64,7 +87,7 @@ cd accepts a variety of arguments:
 - Name of children Directory
 - .. To move to parent directory of the file.
 
-You can learn More of these basic cli commands here ➡️ Click me
+You can learn More of these basic cli commands here ➡️ [Click me](https://www.freecodecamp.org/news/the-linux-commands-handbook/)
 
 ## Git Initialising
 
@@ -74,7 +97,13 @@ Before initialising lets check what version git is being installed in our system
 $ git --version
 ```
 
-![git version](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/laqtdp79h9febz4fzq77.png)
+<div align="center">
+  <Image
+    src="/blogs/git-the-simple-guide/git version.png"
+    height={420}
+    width={840}
+  />
+</div>
 
 To work with git we need some config for the user details as it manage the log associated with the changer maintaining the changes.
 
@@ -97,29 +126,69 @@ git -config --global user.email
 
 These would return your given values or string.
 
-![git configuration](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/hft1qj0y631cix7n2atp.png)
+<div align="center">
+  <Image
+    src="/blogs/git-the-simple-guide/git configuration.png"
+    height={420}
+    width={840}
+  />
+</div>
 
 Now we are actually ready for the project so head over and create a folder and add any project you want to push over to github and keep a track of changes in git.
 
-![git init in folder](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/nrjd5p8z5j0uyrbt352q.png)
+<div align="center">
+  <Image
+    src="/blogs/git-the-simple-guide/git init in folder.png"
+    height={420}
+    width={840}
+  />
+</div>
 
 As we are done with creating a git repository , its time to add some files and commit the changes to log.😎 For this article am using a simple fronted site .
 
-![index.html init](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/f4bggfzpervfn3zdje2r.png)
+<div align="center">
+  <Image
+    src="/blogs/git-the-simple-guide/index.html init.png"
+    height={420}
+    width={840}
+  />
+</div>
 
 Now lets add these files to commit and then commit with a message "First dev commit" .
 
-![First dev commit](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/w3p9lspn1vzdg51fmo10.png)
+<div align="center">
+  <Image
+    src="/blogs/git-the-simple-guide/First dev commit.png"
+    height={420}
+    width={840}
+  />
+</div>
 
 We can check all the logs for confirmation 😀
-![logs](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/in6dxp83sww7k92bqage.png)
+
+<div align="center">
+  <Image src="/blogs/git-the-simple-guide/logs.png" height={420} width={840} />
+</div>
 
 ## Now lets Push this local repository to Github .
 
 To push the code or your work to Github we first have to make a connection between the local repository and remote one for both fetching and pushing operation . For that lets first create a repository an blank one over github .
-![blank repository](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3lrmbghvxnann1laj2jr.png)
 
-To establish the connection we would be needing the url : `https://github.com/Abbhiishek/bookish-giggle.git `. These url can be found over your repository or else you just add .git in the last of your repository url from browser.
+<div align="center">
+  <Image
+    src="/blogs/git-the-simple-guide/blank repository.png"
+    height={420}
+    width={840}
+  />
+</div>
+
+To establish the connection we would be needing the url :
+
+```bash
+https://github.com/Abbhiishek/bookish-giggle.git
+```
+
+These url can be found over your repository or else you just add .git in the last of your repository url from browser.
 
 To make the connection we do :
 
@@ -128,7 +197,13 @@ git remote add origin url_here
 
 ```
 
-![remote add origin](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/shd9nmtvkrkd0kn9fwkg.png)
+<div align="center">
+  <Image
+    src="/blogs/git-the-simple-guide/remote add origin.png"
+    height={420}
+    width={840}
+  />
+</div>
 
 Also to view the connection that are established we can use :
 
@@ -143,8 +218,22 @@ To do so we do we have the command :
 git push origin <branch_name>
 ```
 
-![pushing](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/15lt03dvgcbsrbq8u27f.png)
+<div align="center">
+  <Image
+    src="/blogs/git-the-simple-guide/why git and github.png"
+    height={420}
+    width={840}
+  />
+</div>
 
 We can see Github is updated with the pushed code
 
-![why git and github](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5lo1hganval5uujsyt82.png)
+<div align="center">
+  <Image
+    src="/blogs/git-the-simple-guide/pushed.png"
+    height={420}
+    width={840}
+  />
+</div>
+
+#### Thanks for reading this article , I hope you liked it .
