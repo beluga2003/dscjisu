@@ -49,7 +49,9 @@ const EventCard: React.FC<IEventCard> = ({ description, eventpic, name, date, lo
 
                 {isCompleted ? <p className='font-mono text-black text-sm bg-slate-100 p-2 rounded-lg hover:bg-slate-500 hover:text-white'>Check out what happened</p> : (
                   <>
-                    <p className='font-mono text-black text-sm bg-slate-100 rounded-lg p-2 hover:bg-slate-500 hover:text-white'>{eventLink ? "Know More" : "Coming Soon"}</p>
+                    <Link href={eventLink} passHref>
+                      <p className='font-mono text-black text-sm bg-slate-100 rounded-lg p-2 hover:bg-slate-500 hover:text-white'>{isActive ? "Know More" : "Coming Soon"}</p>
+                    </Link>
                   </>
                 )}
               </Link>
