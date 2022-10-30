@@ -124,6 +124,18 @@ ul .nav-list {
     height: 130px;
 }
 
+
+/* article section */
+
+article div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+    padding: 20px 0;
+    border-radius: 15%;
+}
+
 article {
     color: white;
     background-color: black;
@@ -172,4 +184,10 @@ article h4,
 article h5,
 article h6 {
     color: #00ffe1;
+}
+
+article img {
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 5px;
 }
