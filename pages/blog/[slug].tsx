@@ -7,6 +7,7 @@ import Image from "next/image";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeHighlight from "rehype-highlight";
 import rehypeSlug from "rehype-slug";
+import toc from "rehype-toc";
 import YouTube from "../../components/cards/youtube/YoutubeCard";
 import { getPostFromSlug, getSlugs, PostMeta } from "../../lib/blog";
 
@@ -56,6 +57,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
                         </div>
                         <div className="">
                             <article>
+                                <h1>Table of Content</h1>
                                 <MDXRemote {...post.source} components={{ YouTube, Image }} />
                             </article>
                         </div>
@@ -75,6 +77,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
                 rehypeSlug,
                 [rehypeAutolinkHeadings, { behavior: "wrap" }],
                 rehypeHighlight,
+                [toc, {}],
             ],
         },
     });

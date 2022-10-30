@@ -26,13 +26,10 @@ export default function Team({ team }) {
                                 github={item.github}
                                 twitter={item.twitter}
                             />
-
                         )
                     })}
                 </div>
             </div>
-
-
         </div>
     )
 }

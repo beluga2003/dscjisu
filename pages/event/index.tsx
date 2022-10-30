@@ -7,7 +7,7 @@ export default function Blog({ events }: { events: EventMeta[] }) {
     return (
         <>
             <Head>
-                <title>Events | DSC JISU</title>
+                <title>Events | Google Developer Student Clubs JIS University - Kolkata</title>
             </Head>
             <div className='lg:p-20 sm:p-2 bg-white flex  flex-col  dark:bg-[#182232] py-10'>
                 <div className="text-center">

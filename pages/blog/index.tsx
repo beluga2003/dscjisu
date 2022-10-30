@@ -10,11 +10,6 @@ export default function Blog({ blogs }: { blogs: PostMeta[] }) {
 
                 <title>Blog | DSC JISU</title>
                 <meta name="keywords" content="gdsc, jis university , jisu, gdsc jisu, kolkata" />
-                <metadata type="context">
-                    The Google Developer Student Club, JIS UNIVERSITY, 💐 welcomes all of you wholeheartedly. We Welcome students to grow and learn together.
-                    We at JIS University build a peer-to-peer learning process making a better environment for students to learn and develop.
-                    This year our Club is aiming to organize resourceful Bootcamps and Interesting Workshops. The major idea is to learn new skills through hands-on workshops and create innovative projects which will help in the betterment of our society.
-                </metadata>
                 <meta name="description" content="The Google Developer Student Club, JIS UNIVERSITY, 💐 welcomes all of you wholeheartedly. We Welcome students to grow and learn together.
                     We at JIS University build a peer-to-peer learning process making a better environment for students to learn and develop.
                     This year our Club is aiming to organize resourceful Bootcamps and Interesting Workshops. The major idea is to learn new skills through hands-on workshops and create innovative projects which will help in the betterment of our society." />

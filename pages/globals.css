@@ -133,7 +133,6 @@ article div {
     align-items: center;
     margin: 0 20px;
     padding: 20px 0;
-    border-radius: 15%;
 }
 
 article {
@@ -190,4 +189,30 @@ article img {
     max-width: 100%;
     padding: 20px;
     border-radius: 5px;
+}
+
+article nav li {
+    color: rgb(51, 133, 133);
+}
+
+article nav li:hover {
+    color: rgb(0, 255, 255);
+}
+
+article nav ol {
+    list-style-type: decimal;
+}
+
+article nav ol li {
+    margin-left: 1.5rem;
+}
+
+.toc {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    margin: 0 20px;
+    padding: 20px 0;
+    border-radius: 15%;
 }
