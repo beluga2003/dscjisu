@@ -29,8 +29,8 @@ function Navbar() {
                         </Link>
                     </div>
                     <div className="flex justify-center items-center">
-                        <span className=' lg:hidden text-3xl'>
-                            {open ? <CloseIcon onClick={toogleMenu} className='cursor-pointer menu-options' /> : <SegmentIcon onClick={toogleMenu} className='cursor-pointer menu-options text-6xl' />}
+                        <span className=' lg:hidden text-4xl transition-all ease-in-out'>
+                            {open ? <CloseIcon onClick={toogleMenu} className='cursor-pointer menu-options' /> : <SegmentIcon onClick={toogleMenu} className='cursor-pointer menu-options' />}
                         </span>
                     </div>
                 </div>
