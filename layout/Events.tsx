@@ -24,6 +24,7 @@ function Events({ event }) {
                                 type={item.type}
                                 isActive={item.isActive}
                                 isCompleted={item.isCompleted}
+                                slug={item.slug}
                             />
                         )
                     })}
