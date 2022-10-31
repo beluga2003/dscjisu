@@ -40,9 +40,12 @@ Contributing to blogs is easy. Just follow the steps below:
    ---
    ```
 
+- `<BLOG CONTENT>` IS THE CONTENT OF YOUR BLOG IN MARKDOWN FORMAT.
 - Add your blog image in the folder `public/blogs/<BLOG SLUG>/`
 - Add your author image in the folder `public/author/`
 - Add your blogs image in the folder`public/blogs/<BLOG SLUG>/` file
 
 4. Commit and push your changes
 5. Create a pull request
+
+Will love to read your blogs and articles. 🤩
