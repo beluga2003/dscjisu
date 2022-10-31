@@ -1,0 +1,31 @@
+{
+    "theme_color": "#000000",
+    "background_color": "#0f0f0f",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "name": "Google Developer Student Club JIS University",
+    "description": "Google Developer Student Clubs JIS University - Kolkata | Google Developer Student Clubs (GDSC) are community groups for college and university students interested in Google developer technologies. Students from all undergraduate or graduate programs with an interest in growing as a developer are welcome.",
+    "short_name": "GDSC JISU",
+    "icons": [{
+            "src": "/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
