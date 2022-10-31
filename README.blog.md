@@ -49,3 +49,75 @@ Contributing to blogs is easy. Just follow the steps below:
 5. Create a pull request
 
 Will love to read your blogs and articles. 🤩
+
+Supported Components:
+
+- [x] Code Block
+- [x] Image
+- [x] YouTube
+
+## CODE BLOCK:
+
+- When adding a code block, add the language name after the first three backticks. For example:
+
+```js
+console.log('Hello World');
+```
+
+- js - JavaScript
+- ts - TypeScript
+- css - CSS
+- html - HTML
+- sh - Shell
+- md - Markdown
+- json - JSON
+- py - Python
+- rb - Ruby
+- go - Go
+- java - Java
+- c - C
+- cpp - C++
+- cs - C#
+- php - PHP
+- swift - Swift
+- bash - Bash
+- yaml - YAML
+- diff - Diff
+- sql - SQL
+- graphql - GraphQL
+- mdx - MDX
+
+## Image
+
+our blogs supports image. To add an image, use the following syntax:
+
+```md
+<div align="center">
+<Image src="<Path to that image>" heigth={Some Heigth} width={some Width}>
+</div>
+```
+
+we are expecting a div wrapped in each image component for now :)
+
+## YouTube
+
+To add a YouTube video, use the following syntax:
+
+```md
+<YouTube id="<YouTube Video ID>" />
+```
+
+for example:
+
+```md
+Youtube url -> https://www.youtube.com/watch?v=2BDnl7WMhw4
+<YouTube id="2BDnl7WMhw4" />
+```
+
+# Table of Contents
+
+We automatically generate a table of contents for each blog post. To add a heading to the table of contents, add the following comment to the heading:
+
+```md
+<!-- toc -->
+```
