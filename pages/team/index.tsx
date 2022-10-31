@@ -34,7 +34,7 @@ export default function Blog({ teams }: { teams: TeamMeta[] }) {
                         We thank all the core team members for their contribution to the project, Events and the community. Without them, this community would not have been possible.
                     </p>
                 </div>
-                <div className='grid grid-flow-row lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1'>
+                <div className='grid grid-flow-row lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1  justify-center'>
                     {teams.map((team) => (
                         <TeamCard
                             id={team.id}
