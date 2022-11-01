@@ -63,7 +63,7 @@ const Home = ({ team, _event, community }) => {
       </Head>
       <Header />
       {/* <Events event={event} /> */}
-      <Team team={team.slice(0, 8)} />
+      <Team team={team.slice(0, 3)} />
       <Chapter />
       <Community community={community} />
       {/* <SpeedDail /> */}
