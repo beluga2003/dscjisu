@@ -37,7 +37,7 @@ export async function getStaticProps() {
   }
 }
 
-const Home = ({ team, event, community }) => {
+const Home = ({ team, event, community }: any) => {
   return (
     <>
       <Head>
