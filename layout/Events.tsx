@@ -1,37 +1,63 @@
-
 import EventCard from "../components/cards/event/EventCard"
 
-function Events({ event }) {
+interface EventProps {
+    id: string
+    key: string
+    name: string
+    eventpic: string
+    description: string
+    date: string
+    eventLink: string
+    locationUrl: string
+    locationName: string
+    type: string
+    isActive: boolean
+    isCompleted: boolean
+    slug: string
+}
+
+interface EventsProps {
+    events: EventProps[]
+}
+
+function Events({ events: events }: EventsProps) {
     return (
-        <div className=' py-20 bg-slate-300 dark:bg-[#0E1525]'>
-            <div className="sm:px-2 lg:px-10 mb-2">
-                <h1 className='font-mono font-extrabold dark:text-white md:text-center text-center text-black text-6xl underline underline-offset-8 decoration-yellow-400  '>Events</h1>
-            </div>
-            <div className='sm:px-20 lg:px-20 mb-2'>
-                <div className='grid lg:grid-cols-3 sm:grid-cols-1 pt-10 gap-5 '>
-                    {event?.map((item) => {
-                        return (
-                            <EventCard
-                                id={item.id}
-                                key={item.id}
-                                name={item.name}
-                                eventpic={item.eventpic}
-                                description={item.description}
-                                date={item.date}
-                                eventLink={item.eventLink}
-                                locationUrl={item.locationUrl}
-                                locationName={item.locationName}
-                                type={item.type}
-                                isActive={item.isActive}
-                                isCompleted={item.isCompleted}
-                                slug={item.slug}
-                            />
-                        )
-                    })}
+        <>
+            <div className="dark:bg-[#0E1525]  bg-[#0E1525]  text-center pt-20">
+                <div className="conatiner mx-auto">
+                    <h1 className='lg:text-6xl text-4xl dark:text-white font-mono'>Upcoming Events</h1>
+                    <p className='dark:text-white font-light font-mono pt-5 text-base px-5 text-clip'>
+                        Checkout our upcoming events
+                    </p>
+                    <div>
+                        <div className="grid p-10 justify-center items-center">
+                            {
+                                events.map((item: EventProps) => {
+                                    return (
+                                        <EventCard
+                                            id={item.id}
+                                            key={item.id}
+                                            name={item.name}
+                                            eventpic={item.eventpic}
+                                            description={item.description}
+                                            date={item.date}
+                                            eventLink={item.eventLink}
+                                            locationUrl={item.locationUrl}
+                                            locationName={item.locationName}
+                                            type={item.type}
+                                            isActive={item.isActive}
+                                            isCompleted={item.isCompleted}
+                                            slug={item.slug}
+
+                                        />
+                                    );
+                                })}
+                        </div>
+
+                    </div>
                 </div>
             </div>
-
-        </div >
+        </>
     )
 }
 
