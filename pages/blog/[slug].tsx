@@ -8,6 +8,7 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeHighlight from "rehype-highlight";
 import rehypeSlug from "rehype-slug";
 import toc from "rehype-toc";
+import remarkGfm from "remark-gfm";
 import YouTube from "../../components/cards/youtube/YoutubeCard";
 import { getPostFromSlug, getSlugs, PostMeta } from "../../lib/blog";
 
@@ -79,6 +80,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
                 rehypeHighlight,
                 [toc, {}],
             ],
+            remarkPlugins: [remarkGfm],
         },
     });
 
