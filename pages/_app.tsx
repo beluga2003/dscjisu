@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }: any) {
         <meta property="og:image:height" content="1080" />
         <meta property="og:title" content="JIS University - Kolkata | Google Developer Student Clubs" />
         <meta property="og:description" content="" />
-        <meta property="og:url" content="https://gdsc.community.dev/jis-university-kolkata/" />
+        <meta property="og:url" content="https://dscjisu.vercel.app/" />
         <meta property="og:type" content="website" />
         <meta property="og:ttl" content="777600" />
         <meta property="og:locale" content="en_US" />
