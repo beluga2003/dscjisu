@@ -36,7 +36,7 @@ function Navbar() {
                 </div>
 
                 <div className="links bg-dark  lg:flex flex-row hidden justify-center items-center" id="menu-list">
-                    <ul className='flex lg:flex-row lg:justify-end lg:opacity-100 opacity-100 text-center items-center gap-10 flex-col lg:min-h-fit min-h-screen  p-10 sm:flex   lg:py-0  lg:pl-0 '>
+                    <ul className='flex lg:flex-row lg:justify-end lg:opacity-100 opacity-100 text-center items-center lg:gap-2 gap-12 flex-col lg:min-h-fit min-h-screen  p-10 sm:flex   lg:py-0  lg:pl-0 '>
                         <li onClick={toogleMenu}><Link href={'/'}  ><a href="#" className="nav-list   hover:font-semibold " >Home</a></Link></li>
                         <li onClick={toogleMenu}><Link href={'/event'} ><a href="#" className="nav-list   hover:font-semibold ">Events</a></Link></li>
                         <li onClick={toogleMenu}><Link href={'/blog'} ><a href="#" className="nav-list   hover:font-semibold ">Blogs</a></Link></li>
