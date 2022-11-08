@@ -1,13 +1,14 @@
 [{
-    "id": "1dmnbfvhfdsvhg",
-    "name": "Host Your Code with Github",
-    "description": "We'll be introducing our club and the events we've got planned for the next year - we would love for you to join our growing community!",
-    "date": "29-10-2022",
-    "type": "Hands On Workshop",
-    "eventpic": "/events/host-your-code-with-github.png",
-    "eventLink": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-host-your-code-with-github/",
-    "isActive": true,
-    "isCompleted": false,
+    "id": "1",
+    "name": "Interview Preparation for Product Companies",
+    "description": "This event is open to anyone who is interested in learning more about how to prepare for a product company interview or in learning about the software development roadmap.",
+    "date": "2022/11/05",
+    "type": "Speaker Session",
+    "slug": "interview-preparation-for-product-companies-development-roadmap",
+    "eventpic": "/events/interview-preparation-for-product-companies-development-roadmap/interview-preparation-for-product-companies-development-roadmap.png",
+    "eventLink": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-interview-preparation-for-product-companies-development-roadmap/",
+    "isActive": false,
+    "isCompleted": true,
     "locationName": "Online",
-    "locationUrl": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-host-your-code-with-github/"
+    "locationUrl": "https://gdsc.community.dev/events/details/developer-student-clubs-jis-university-kolkata-presents-interview-preparation-for-product-companies-development-roadmap/"
 }]

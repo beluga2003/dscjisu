@@ -1,0 +1,140 @@
+---
+tags: Github Actions
+title: Hashnode Blogs on GitHub Profile
+body: Add your Hashnode blogs to your GitHub profile using GitHub Actions
+author: Abhishek Kushwaha
+date: 2022-11-03
+blogImage: /blogs/Hashnode Blogs on GitHub Profile/blogimage.png
+authorImage: https://github.com/Abbhiishek.png
+blogslug: Hashnode Blogs on GitHub Profile
+---
+
+## Prerequisites
+
+- A GitHub account
+- A Hashnode account
+- Few Blogs on Hashnode
+- A little bit of patience
+
+## What is GitHub Actions?
+
+GitHub Actions is a feature of GitHub that allows you to automate your workflow. It is a CI/CD tool that allows you to build, test, and deploy your code. It is a great way to automate your workflow and save time. You can also use it to automate your Hashnode blogs on your GitHub profile.
+
+## What is Hashnode?
+
+<div align="center">
+  <Image
+    src="/blogs/Hashnode Blogs on GitHub Profile/hashnode.png"
+    height={320}
+    width={920}
+  />
+</div>
+
+Hashnode is a blogging platform for developers. It is a great place to share your knowledge and learn from others. It is a great place to share your knowledge and learn from others. It is a great place to share your knowledge and learn from others.
+
+## How to add Hashnode blogs to your GitHub profile?
+
+Follow up these steps and make your GitHub profile synced with your Hashnode one!
+
+### Create the special repository
+
+Create a new repository with the name `yourusername`. Replace `yourusername` with your GitHub username. For example, if your GitHub username is `Abhishek`, then the repository name will be `Abhishek`.
+This repository will contain a README.md file that will be used to display your Hashnode blogs on your GitHub profile.
+
+<div align="center">
+  <Image
+    src="/blogs/Hashnode Blogs on GitHub Profile/special repository.png"
+    height={320}
+    width={920}
+  />
+</div>
+
+### Add the pattern to README
+
+Add the following pattern to the README.md file of the repository you created in the previous step.
+
+```md
+#### :books: Recent Blog Posts
+
+<!-- BLOGPOSTS:START -->
+<!-- BLOGPOSTS:END -->
+```
+
+That's how the GitHub Action would recognizes where it has to put the list of latest blogs.
+
+### Create GitHub Action
+
+Navigate to github.com/`<your-username>/<your-username>` and open up the "Actions" tab. Click "setup a workflow yourself" to create a new blank workflow.
+
+<div align="center">
+  <Image
+    src="/blogs/Hashnode Blogs on GitHub Profile/github-actions.png"
+    height={420}
+    width={840}
+  />
+</div>
+
+![GitHub Actions](/blogs/Hashnode Blogs on GitHub Profile/github-actions.png)
+
+### Add the workflow
+
+Paste the exact same workflow configuration you see down here. (It syncs every 6 hours of the day. You can change its schedule by changing the cron value)
+
+```yml
+name: Hashnode Blog Posts
+on:
+  schedule:
+    # Runs every 6 hours of the day
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-readme-with-blog:
+    name: Update this repo's README with the latest blog posts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: gautamkrishnar/blog-post-workflow@master
+        with:
+          comment_tag_name: 'BLOGPOSTS'
+          feed_list: '<link-to-your-rss>'
+          template: '$newline - $randomEmoji(💯,🔥,💫,🚀,🌮) [$title]($url)'
+          commit_message: 'recent posts section updated'
+          gh_token: ${{ secrets.GITHUB_TOKEN }}
+```
+
+Replace the feed_list value with `<your-domain>/rss.xml`. In my case, It's like this:
+
+```yml
+feed_list: 'https://abbhishek.hashnode.dev/rss.xml'
+```
+
+<div align="center">
+  <Image
+    src="/blogs/Hashnode Blogs on GitHub Profile/workflow.png"
+    height={420}
+    width={840}
+  />
+</div>
+
+### We're Almost Done!
+
+To test the result, open up the "Actions" tab and run the workflow manually only this time. To do that, select the action we just created from the left-hand side and click the "Run workflow" drop-down. Finally, press the "Run workflow" green button.
+
+<div align="center">
+  <Image
+    src="/blogs/Hashnode Blogs on GitHub Profile/run-workflow.png"
+    height={420}
+    width={840}
+  />
+</div>
+
+Wait a few seconds to get your workflow done. Once it's run successfully, head back to your GitHub profile and enjoy the result.
+
+<div align="center">
+  <Image
+    src="/blogs/Hashnode Blogs on GitHub Profile/result.png"
+    height={320}
+    width={920}
+  />
+</div>

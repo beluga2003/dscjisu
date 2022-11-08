@@ -1,0 +1,120 @@
+---
+tags: vcs
+title: Version Control System
+body: A Version Control System (VCS) is a system which contains changes recorded in a file or set of files over period of time.
+author: Abhisan Paul
+date: 2022-11-08
+blogImage: /blogs/vcs/vcs.png
+authorImage: /authors/abhisan-paul.jpeg
+blogslug: python-is-an-object-oriented-programming-language
+---
+
+# Learning Guide on **Version Control System**
+
+A Version Control System (VCS) is a system which contains changes recorded in a file or set of files over period of time.
+
+## **What is Version Control System (VCS) ?**
+
+A Version Control System (VCS) is a system which contains changes recorded in a file or set of files over period of time.It allows us to work with other programmers easily.In this system there are some software tools that helps to manage the changes in source code.It keeps every single modification of codes by a special type of database,using that developers can easily compare their early versionof codes with the older one and easily fix the issues.There are some unique features of version control system are as follows:
+
+- VCS includes tag system which helps in distinguishing between alpha, beta or various releases for different documents.
+- It does not require any secondary repository systems.
+- Up to date history is recorded for the document and any file types.
+
+## **Benifits of the Version Control System :**
+
+- Complete change history of the file.
+- Traceability.
+- Works Simultaneously.
+- Branching and merging.
+
+## **Types of Version Control System :**
+
+<div align="center">
+  <Image src="/blogs/vcs/version-control-models.jpg" height={420} width={840} />
+</div>
+
+- Localized version Control System(LVCS).
+- Centralized version control systems(CVCS).
+- Distributed version control systems(DVCS).
+
+### **Localized Version Control Systems:**
+
+<div align="center">
+  <Image src="/blogs/vcs/local.png" height={420} width={840} />
+</div>
+
+- Local version control system maintains track of files within the local system.
+- This approach is very common and simple. This type is also error prone which means the chances of accidentally writing to the wrong file is higher.
+- The main drawback of Local VCS is that it has only one point of failure.
+
+### **Centralized Version Control System :**
+
+<div align="center">
+  <Image src="/blogs/vcs/centralized.jpg" height={420} width={840} />
+</div>
+
+In this approach, all the changes in the files are tracked under the centralized
+server
+
+- Everyone on the system will have information about the work that others are doing on the project.
+- Administrators have control over other developers.
+- It has also same drawback like Local VCS, is that it has only one point of failure.
+
+### **Distributed Version Control System :**
+
+<div align="center">
+  <Image src="/blogs/vcs/distributed.jpg" height={420} width={840} />
+</div>
+
+Distributed version control systems come into picture to overcome the drawback of centralized version control system.The clients completely clone the repository including its full history.
+
+- In a Distributed Version Control System the user has a local copy of a repository.
+- DVCS also allows automatic management branching and merging.
+- All checkout contains a full backup of all the data.
+
+### Example: **GIT**.
+
+**Difference b/w the Centralized Version Control System (CVCS) & Distributed Version Control System (DVCS):**
+
+| CVCS                                                                                                        | DVCS                                                                                                         |
+| :---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| **1.** In CVCS The repository is placed in one place and delivers information to many clients.              | In DVCS every user records a local copy of repository in place of the repository.                            |
+| **2.** It is based on concept of central repository.                                                        | It is flexible and based on concept on everyone has their own repository.                                    |
+| **3.** In CVCS the latest code is provided by the server to the clients.                                    | In DVCS the user can check out the code and the central repository.                                          |
+| **4.** CVCS is easy to administrate and has additional control over users & access by its server one place. | DVCS is fast camparing tp CVCS, as user don't have to to interact with the central server for every command. |
+
+## **What is GIT ?**
+
+- Git is the distributed version control system and has an emphasis on speed and performance.
+- It is supported by all operating systems. Git is open source software distributed under the terms of the GNU (General Public License).
+- The version control system allows us to track and work together with our team members at the same workspace.
+
+Git is the foundation of many services such as GitHub and GitLab, but we can use Git without using any other Git services. Git can be used both privately and publicly.
+
+The official website is as follows :
+
+[https://git-scm.com/](https://git-scm.com/"GIT")
+
+### Features of GIT
+
+- **Open Source:** Git is an open-source system tool and is released under the GPL (General Public Lic: ense) license.
+- **Security:** Git is secure,it uses the SHA1 (Secure Hash Function) to name and identify objects within its repository. Files and commits can retrieved by its checksum at the time of checkout.
+- **Scalable:** Git is scalable, which means that when the number of users increases, the Git tool can easily handle such situations.
+- **Speed:** Git is very fast,it can complete all the tasks in a while. Almost all the git operations are done on the local repository,so it provides a huge-high speed.
+
+### Advantages of GIT
+
+The main benefits of using Git are-
+
+1. **Saves Time:** Git is lightning fast technology and each command takes only a few seconds to execute.
+1. **Undo Mistakes:** In Git we can Undo mistakes.
+1. **Track the Changes:** Git also facilitates with some exciting features like Diff, Log, and Status that allows us to track changes so that we can check the status.
+
+Thanks for reading this blog, I wish you liked it O.O.
+
+## Reference
+
+You can refer to the following links for more information:
+
+- [Git the Simple Guide](/blog/git-the-simple-guide)
