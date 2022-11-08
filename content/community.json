@@ -1,15 +1,7 @@
 [{
-        "id": 1,
-        "name": "Code For Community",
-        "description": "Code For Community is a non-profit organization that provides free online resources for developers to learn web development. Our mission is to help people learn to code for free.",
-        "image": "/community/codeforcommunity.png",
-        "link": "something"
-    },
-    {
-        "id": 2,
-        "name": "JIS University",
-        "description": "JIS University is a private university located near Agarpara, West Bengal, India It was established in 2014 under JIS University Act, 2014",
-        "image": "/community/jisUniversity.png",
-        "link": "something"
-    }
-]
+    "id": 1,
+    "name": "Code For Community",
+    "description": "Code For Community is a non-profit organization that provides free online resources for developers to learn web development. Our mission is to help people learn to code for free.",
+    "image": "/community/codeforcommunity.png",
+    "link": "something"
+}]
