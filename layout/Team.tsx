@@ -1,8 +1,24 @@
 import TeamCard from '../components/cards/team/TeamCard';
 
+interface team {
+    team: TeamProps[]
+}
+interface TeamProps {
 
+    id: string;
+    name: string;
+    image: string;
+    description: string;
+    link: string;
+    tagline: string;
+    linkedin: string;
+    github: string;
+    twitter: string;
+    role: string;
 
-export default function Team({ team }) {
+}
+
+export default function Team({ team }: team) {
 
     return (
         <div className=" pt-20 text-center dark:bg-[#182232] px-5">
@@ -12,8 +28,8 @@ export default function Team({ team }) {
             </p>
             <div className="lg:px-24 sm:p-5">
 
-                <div className=" grid grid-flow-row lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1  lg:mx-5">
-                    {team?.map((item) => {
+                <div className=" grid  justify-center lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1  lg:mx-5">
+                    {team?.map((item: TeamProps) => {
                         return (
                             <TeamCard
                                 id={item.id}
