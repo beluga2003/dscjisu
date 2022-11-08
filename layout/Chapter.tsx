@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 function Newsletter() {
     return (
-        <div className='lg:p-20 sm:p-2 bg-[#CBD5E1] flex  flex-col text-center dark:bg-[#0E1525] py-10'>
+        <div className='lg:p-20 sm:p-2 flex  flex-col text-center bg-slate-800 py-10'>
             <h1 className='lg:text-6xl text-4xl dark:text-white font-mono'>Stay <span className='underline decoration-solid underline-offset-2 decoration-yellow-300 font-mono updated'>Updated</span></h1>
             <p className='dark:text-white font-light font-mono pt-5 text-base px-5 text-clip'>
                 Want to stay up to date with the latest news and updates?
