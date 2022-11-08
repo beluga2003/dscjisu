@@ -1,13 +1,14 @@
 // import SpeedDail from '../components/speedDail';
-import Chapter from '../layout/Chapter';
-import Community from '../layout/Community';
-import Header from '../layout/Header';
-import Team from '../layout/Team';
-
 import Head from 'next/head';
 import CommunityData from '../content/community.json';
 import EventData from '../content/events.json';
 import TeamData from '../content/team.json';
+import Chapter from '../layout/Chapter';
+import Community from '../layout/Community';
+import Events from '../layout/Events';
+import Header from '../layout/Header';
+import Landing from '../layout/Landing';
+import Team from '../layout/Team';
 
 export async function getStaticProps() {
 
@@ -30,17 +31,17 @@ export async function getStaticProps() {
   return {
     props: {
       team: Team,
-      event: Event,
+      event: Event.filter((event) => event.isCompleted === false),
       community: Community
     }, // will be passed to the page component as props
   }
 }
 
-const Home = ({ team, _event, community }) => {
+const Home = ({ team, event, community }) => {
   return (
     <>
       <Head>
-        <title>DSC JIS University</title>
+        <title>Google Developer Student Clubs JIS University - Kolkata</title>
         <meta name="description" content="Google Developer Student Clubs JIS University - Kolkata | Google Developer Student Clubs (GDSC) are community groups for college and university students interested in Google developer technologies. Students from all undergraduate or graduate programs with an interest in growing as a developer are welcome." />
         <meta name="description" content="Check out Google Developer Student Clubs JIS University - Kolkata events, learn more or contact this organizer."></meta>
         <meta name="robots" content="index, follow"></meta>
@@ -61,12 +62,16 @@ const Home = ({ team, _event, community }) => {
         <meta property="og:ttl" content="777600" />
         <meta property="og:locale" content="en_US" />
       </Head>
-      <Header />
-      {/* <Events event={event} /> */}
-      <Team team={team.slice(0, 3)} />
-      <Chapter />
-      <Community community={community} />
-      {/* <SpeedDail /> */}
+
+      <main>
+        <Landing />
+        <Header />
+        <Events events={event} />
+        <Team team={team.slice(0, 3)} />
+        <Chapter />
+        <Community community={community} />
+        {/* <SpeedDail /> */}
+      </main>
     </>
   );
 };
